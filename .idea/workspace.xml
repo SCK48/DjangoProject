@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/executive-01_E61grB0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/executive-03_jCAlvlf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/presidential-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/presidential-01_BYmUspr.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +85,7 @@
       <workItem from="1586024713009" duration="16565000" />
       <workItem from="1586121438135" duration="1913000" />
       <workItem from="1586196251842" duration="1467000" />
-      <workItem from="1586537398670" duration="14103000" />
+      <workItem from="1586537398670" duration="16784000" />
     </task>
     <task id="LOCAL-00001" summary="Header Logo değişti">
       <created>1585674644488</created>
@@ -136,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586546389421</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Kategori ürünlerini gösterme yapıldı (Video 16)">
+      <created>1586552973873</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586552973873</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,17 +149,18 @@
     <MESSAGE value="İletişim formu aktif hale getirildi" />
     <MESSAGE value="Slider dinamik hale getirildi" />
     <MESSAGE value="Kategori alt kategori menu eklendi (Video 15)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kategori alt kategori menu eklendi (Video 15)" />
+    <MESSAGE value="Kategori ürünlerini gösterme yapıldı (Video 16)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kategori ürünlerini gösterme yapıldı (Video 16)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="368" y="0" key="CommitChangelistDialog2" timestamp="1586546386018">
+    <state x="368" y="0" key="CommitChangelistDialog2" timestamp="1586555941574">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586546386018" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1586197311893">
+    <state x="368" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586555941574" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1586552988047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586197311893" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586552988047" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586537412275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
