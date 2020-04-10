@@ -35,7 +35,7 @@
                   {% load mptt_tags %}
                 <ul class="dropdown arrow-top">
                     {% recursetree category %}
-                  <li><a href="/category/{{ node.slug }}">{{ node.title }}</a></li>
+                  <li><a href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a></li>
                     {% if not node.is_leaf_node %}
                         <ul class="children">
                             {{ children }}
