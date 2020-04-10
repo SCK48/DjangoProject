@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
       <workItem from="1586024713009" duration="16565000" />
       <workItem from="1586121438135" duration="1913000" />
       <workItem from="1586196251842" duration="1467000" />
-      <workItem from="1586537398670" duration="16784000" />
+      <workItem from="1586537398670" duration="21751000" />
     </task>
     <task id="LOCAL-00001" summary="Header Logo değişti">
       <created>1585674644488</created>
@@ -136,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586552973873</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Anasayfa Ürünleri Dinamik Hale Getirildi (Video 17)">
+      <created>1586555943504</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586555943504</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +159,8 @@
     <MESSAGE value="Slider dinamik hale getirildi" />
     <MESSAGE value="Kategori alt kategori menu eklendi (Video 15)" />
     <MESSAGE value="Kategori ürünlerini gösterme yapıldı (Video 16)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kategori ürünlerini gösterme yapıldı (Video 16)" />
+    <MESSAGE value="Anasayfa Ürünleri Dinamik Hale Getirildi (Video 17)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Anasayfa Ürünleri Dinamik Hale Getirildi (Video 17)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="0" key="CommitChangelistDialog2" timestamp="1586555941574">
