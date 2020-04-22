@@ -162,10 +162,12 @@
             <div class="bg-white widget border rounded">
 
               {% for rs in comments %}
-              <div>
+              <div class="border-bottom border-top py-3" >
                   <h3 class="h4 text-black widget-title mb-3">{{ rs.user.username}}</h3>
                   <h6>{{ rs.create_at }}</h6>
+                  <hr>
                   <p>{{ rs.comment }}</p>
+
               </div>
               {% endfor %}
             </div>
