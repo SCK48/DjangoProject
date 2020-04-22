@@ -39,7 +39,7 @@
             <div class="bg-white property-body border-bottom border-left border-right">
               <div class="row mb-5">
                 <div class="col-md-6">
-                  <strong class="text-success h1 mb-3">${{ product.price }}</strong>
+                  <strong class="text-success h1 mb-3">{{ product.price }}TL</strong>
                 </div>
                 <div class="col-md-6">
                   <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
                   <span class="d-inline-block text-black mb-0 caption-text">Price/Sqft</span>
-                  <strong class="d-block">$520</strong>
+                  <strong class="d-block">520</strong>
                 </div>
               </div>
               <h2 class="h4 text-black">Konut Detayları</h2>
@@ -117,29 +117,57 @@
 
               <div class="bg-white widget border rounded">
 
-              <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
-              <form action="" class="form-contact-agent">
-                <div class="form-group">
+              <h3 class="h4 text-black widget-title mb-3">Review</h3>
+              {% if messages %}
+                  {% for message in messages %}
+                      <div class="alert alert-{{ message.tags }}" role="alert">
+                        {{ message }}
+                      </div>
+                  {% endfor %}
+              {% endif %}
+              <form action="/product/addcomment/{{ product.id }}" class="form-contact-agent" method="post">
+                  {% csrf_token %}
+                <!-- <div class="form-group">
                   <label for="name">Name</label>
                   <input type="text" id="name" class="form-control">
+                </div> -->
+                <div class="form-group">
+                  <label for="name">Subject</label>
+                  <input type="text" name="subject"  class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control">
+                  <label for="comment">Comment</label>
+                  <input type="text" name="comment" id="id_comment" class="form-control">
+                </div>
+              <div class="form-group">
+                  <label for="name">Rate</label>
+                  <div class="icon-star">
+                      <input type="radio" id="star5" name="rate" value="5" /><label for="star5"></label>
+                      <input type="radio" id="star4" name="rate" value="4" /><label for="star4"></label>
+                      <input type="radio" id="star3" name="rate" value="3" /><label for="star3"></label>
+                      <input type="radio" id="star2" name="rate" value="2" /><label for="star2"></label>
+                      <input type="radio" id="star1" name="rate" value="1" /><label for="star1"></label>
+                  </div>
+
                 </div>
                 <div class="form-group">
-                  <label for="phone">Phone</label>
-                  <input type="text" id="phone" class="form-control">
+                  <input type="submit" id="phone" class="btn btn-primary" value="Comment">
                 </div>
-                <div class="form-group">
-                  <input type="submit" id="phone" class="btn btn-primary" value="Send Message">
-                </div>
+                  {% if user.id is not None %}
+                  {% else %}
+                  {% endif%}
               </form>
             </div>
 
             <div class="bg-white widget border rounded">
-              <h3 class="h4 text-black widget-title mb-3">Paragraph</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit qui explicabo, libero nam, saepe eligendi. Molestias maiores illum error rerum. Exercitationem ullam saepe, minus, reiciendis ducimus quis. Illo, quisquam, veritatis.</p>
+
+              {% for rs in comments %}
+              <div>
+                  <h3 class="h4 text-black widget-title mb-3">{{ rs.user.username}}</h3>
+                  <h6>{{ rs.create_at }}</h6>
+                  <p>{{ rs.comment }}</p>
+              </div>
+              {% endfor %}
             </div>
 
           </div>

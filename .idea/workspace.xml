@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +90,12 @@
       <workItem from="1586024713009" duration="16565000" />
       <workItem from="1586121438135" duration="1913000" />
       <workItem from="1586196251842" duration="1467000" />
-      <workItem from="1586537398670" duration="21751000" />
+      <workItem from="1586537398670" duration="21870000" />
+      <workItem from="1586712383250" duration="352000" />
+      <workItem from="1586791638364" duration="764000" />
+      <workItem from="1587412252511" duration="1347000" />
+      <workItem from="1587467256816" duration="4896000" />
+      <workItem from="1587567817619" duration="6461000" />
     </task>
     <task id="LOCAL-00001" summary="Header Logo değişti">
       <created>1585674644488</created>
@@ -145,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586555943504</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Ürün Detay Sayfası ve Resim Galerisi Eklendi (Video 18)">
+      <created>1586562500777</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586562500777</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,21 +175,22 @@
     <MESSAGE value="Kategori alt kategori menu eklendi (Video 15)" />
     <MESSAGE value="Kategori ürünlerini gösterme yapıldı (Video 16)" />
     <MESSAGE value="Anasayfa Ürünleri Dinamik Hale Getirildi (Video 17)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Anasayfa Ürünleri Dinamik Hale Getirildi (Video 17)" />
+    <MESSAGE value="Ürün Detay Sayfası ve Resim Galerisi Eklendi (Video 18)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ürün Detay Sayfası ve Resim Galerisi Eklendi (Video 18)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="368" y="0" key="CommitChangelistDialog2" timestamp="1586555941574">
+    <state x="368" y="0" key="CommitChangelistDialog2" timestamp="1586562498363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586555941574" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1586552988047">
+    <state x="368" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586562498363" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1586562518827">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586552988047" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586537412275">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586562518827" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1587568901951">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1586537412275" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587568901951" />
     <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585674520442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
