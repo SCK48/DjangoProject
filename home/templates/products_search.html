@@ -12,6 +12,21 @@
 {% endblock %}
 
 {% block content %}
+<script>
+    $(function() {
+        $("#query").autocomplete({
+            source: "/search_auto/",
+            select: function (event, ui) { //item selected
+                AutoCompleteSelectHandler(event, ui)
+            },
+            minLength: 2,
+        });
+    });
+    function AutoCompleteSelectHandler(event, ui)
+    {
+        var selectedObj = ui.item;
+    }
+</script>
 <div class="site-section site-section-sm pb-0">
       <div class="container">
         <div class="row">
@@ -21,21 +36,29 @@
               <div class="col-md-3">
                 <label for="list-types">Search</label>
                   <div class="select-wrap">
-                    <input name="query" type="text" placeholder="Search">
+                    <input id="query" name="query" type="text" placeholder="Search">
                   </div>
-              </div><!--
+              </div>
               <div class="col-md-3">
-                <label for="offer-types">Offer Type</label>
+                <label for="offer-types">Kategoriler</label>
                 <div class="select-wrap">
                   <span class="icon icon-arrow_drop_down"></span>
-                  <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
-                    <option value="">For Sale</option>
-                    <option value="">For Rent</option>
-                    <option value="">For Lease</option>
+                    {% load mptt_tags %}
+                  <select name="catid" class="form-control d-block rounded-0">
+                    {% recursetree category %}
+                        {% if node.is_leaf_node %}
+                            <option value="{{ node.id }}">{{ node.title }}</option>
+                        {% endif %}
+                        {% if not node.is_leaf_node %}
+                            <optgroup label="{{ node.title }}">
+                                {{ children }}
+                            </optgroup>
+                      {% endif %}
+                    {% endrecursetree %}
                   </select>
                 </div>
               </div>
-
+                <!--
               <div class="col-md-3">
                 <label for="select-city">Select City</label>
                 <div class="select-wrap">
