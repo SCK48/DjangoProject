@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +113,7 @@
       <workItem from="1587467256816" duration="4896000" />
       <workItem from="1587567817619" duration="8854000" />
       <workItem from="1587585196770" duration="12495000" />
-      <workItem from="1587665806935" duration="3549000" />
+      <workItem from="1587665806935" duration="5895000" />
     </task>
     <task id="LOCAL-00001" summary="Header Logo değişti">
       <created>1585674644488</created>
@@ -204,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587598035875</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Kategori ve Ürün için otomatik slug yapıldı (Video 22)">
+      <created>1587670776808</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587670776808</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +233,8 @@
     <MESSAGE value="Ürün Arama Butonu Yapıldı (Video 20)" />
     <MESSAGE value="Ürün Aramada Otomatik Tamamlama Yapıldı - Hata:[Products_Search if catid==0'a girmiyor] (Video 21)" />
     <MESSAGE value="Ürün Aramada Otomatik Tamamlama Yapıldı (Video 21)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ürün Aramada Otomatik Tamamlama Yapıldı (Video 21)" />
+    <MESSAGE value="Kategori ve Ürün için otomatik slug yapıldı (Video 22)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kategori ve Ürün için otomatik slug yapıldı (Video 22)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Notifications" timestamp="1587597951656">

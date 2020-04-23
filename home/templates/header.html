@@ -28,8 +28,6 @@
               <li class="active">
                 <a href="/">Anasayfa</a>
               </li>
-              <li><a href="buy.html">Buy</a></li>
-              <li><a href="rent.html">Rent</a></li>
               <li class="has-children">
                 <a href="properties.html">Properties</a>
                   {% load mptt_tags %}
@@ -47,6 +45,21 @@
               <li><a href="/referanslar">Konum</a></li>
               <li><a href="/hakkimizda">Hakkimizda</a></li>
               <li><a href="/iletisim">İletişim</a></li>
+
+              {% if user.id is not None %}
+                    <li class="has-children">
+                    <a href="properties.html">{{ user.username }}</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="#">Condo</a></li>
+                      <li><a href="#">Property Land</a></li>
+                      <li><a href="/logout/">Logout</a></li>
+                    </ul>
+              </li>
+              {% else %}
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="properties.html">Sign up</a></li>
+
+              {% endif %}
             </ul>
           </nav>
         </div>
