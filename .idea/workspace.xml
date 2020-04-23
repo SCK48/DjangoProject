@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,7 +110,8 @@
       <workItem from="1587412252511" duration="1347000" />
       <workItem from="1587467256816" duration="4896000" />
       <workItem from="1587567817619" duration="8854000" />
-      <workItem from="1587585196770" duration="12257000" />
+      <workItem from="1587585196770" duration="12495000" />
+      <workItem from="1587665806935" duration="3549000" />
     </task>
     <task id="LOCAL-00001" summary="Header Logo değişti">
       <created>1585674644488</created>
@@ -190,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587597649240</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Ürün Aramada Otomatik Tamamlama Yapıldı (Video 21)">
+      <created>1587598035875</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587598035875</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +223,8 @@
     <MESSAGE value="Ürün Yorum ve Puan Ekleme Yapıldı (Video 19)" />
     <MESSAGE value="Ürün Arama Butonu Yapıldı (Video 20)" />
     <MESSAGE value="Ürün Aramada Otomatik Tamamlama Yapıldı - Hata:[Products_Search if catid==0'a girmiyor] (Video 21)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ürün Aramada Otomatik Tamamlama Yapıldı - Hata:[Products_Search if catid==0'a girmiyor] (Video 21)" />
+    <MESSAGE value="Ürün Aramada Otomatik Tamamlama Yapıldı (Video 21)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ürün Aramada Otomatik Tamamlama Yapıldı (Video 21)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Notifications" timestamp="1587597951656">
@@ -220,10 +235,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587578799677" />
-    <state x="344" y="0" key="CommitChangelistDialog2" timestamp="1587597646491">
+    <state x="306" y="0" key="CommitChangelistDialog2" timestamp="1587670769934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="344" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587597646491" />
+    <state x="306" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587670769934" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587578785507">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -232,14 +247,15 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587578813369" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1587597893753">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1587598044968">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587597893753" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1587585733456">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587598044968" />
+    <state x="1745" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1587665815188">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587585733456" />
+    <state x="1745" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1587665815188" />
     <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585674520442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
