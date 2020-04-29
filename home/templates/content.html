@@ -72,11 +72,8 @@
               <div class="mr-auto">
                 <a href="index.html" class="icon-view view-module active"><span class="icon-view_module"></span></a>
                 <a href="view-list.html" class="icon-view view-list"><span class="icon-view_list"></span></a>
-
               </div>
-
               <div class="ml-auto d-flex align-items-center">
-
                     {% load mptt_tags %}
                     <tr>
                     {% recursetree category %}
@@ -85,12 +82,9 @@
                             <th class="children"><a href="/category/{{ node.id }}/{{ node.slug }}" class="view-list px-3 border-right active">{{ children }}</a>
                             </th>
                         {% endif %}
-
                         {% endrecursetree %}
                         </tr>
                 </div>
-
-
                 <div class="select-wrap">
                   <span class="icon icon-arrow_drop_down"></span>
                   <select class="form-control form-control-sm d-block rounded-0">
@@ -103,10 +97,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="site-section site-section-sm bg-light">
       <div class="container">
 
@@ -128,20 +120,16 @@
                   <li>
                     <span class="property-specs">Beds</span>
                     <span class="property-specs-number">2 <sup>+</sup></span>
-
                   </li>
                   <li>
                     <span class="property-specs">Baths</span>
                     <span class="property-specs-number">2</span>
-
                   </li>
                   <li>
                     <span class="property-specs">SQ FT</span>
                     <span class="property-specs-number">7,000</span>
-
                   </li>
                 </ul>
-
               </div>
             </div>
           </div>
@@ -160,13 +148,10 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="site-section site-section-sm bg-light">
       <div class="container">
-
         <div class="row">
           <div class="col-12">
             <div class="site-section-title mb-5">
@@ -174,9 +159,7 @@
             </div>
           </div>
         </div>
-
         <div class="row mb-5">
-
           {% for rs in relatedproducts %}
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="property-entry h-100">
@@ -194,28 +177,22 @@
                   <li>
                     <span class="property-specs">Beds</span>
                     <span class="property-specs-number">2 <sup>+</sup></span>
-
                   </li>
                   <li>
                     <span class="property-specs">Baths</span>
                     <span class="property-specs-number">2</span>
-
                   </li>
                   <li>
                     <span class="property-specs">SQ FT</span>
                     <span class="property-specs-number">7,000</span>
-
                   </li>
                 </ul>
-
               </div>
             </div>
           </div>
             {% endfor %}
-
         </div>
       </div>
-
     <div class="site-section">
       <div class="container">
         <div class="row justify-content-center">
@@ -226,7 +203,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p>
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-6 col-lg-4">
             <a href="#" class="service text-center">
@@ -291,9 +267,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
             </div>
           </div>
-
         </div>
-
       </div>
     </div>
 
