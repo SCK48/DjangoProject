@@ -2,19 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/templates/user_property.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/0002_auto_20200506_2206.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/0003_properties_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/0004_auto_20200507_0008.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Stüdyo1_M2q8Uow.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Stüdyo1_csaIgq9.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/htmll.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_property.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_property.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,26 +58,29 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1Ytk5qdueltuzPpodLBJ3ULk4CZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/property" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Django\project2\property" />
       <recent name="C:\Django\project2\user\templates" />
       <recent name="C:\Django\project2\user" />
       <recent name="C:\Django\project2\home\templates" />
       <recent name="C:\Django\project2\home" />
-      <recent name="C:\Django\project2\product" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +139,7 @@
       <workItem from="1587675422042" duration="136000" />
       <workItem from="1588162843652" duration="11212000" />
       <workItem from="1588700279887" duration="3954000" />
-      <workItem from="1588781671950" duration="8010000" />
+      <workItem from="1588781671950" duration="16463000" />
     </task>
     <task id="LOCAL-00001" summary="Header Logo değişti">
       <created>1585674644488</created>
@@ -264,13 +274,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588179332543</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Kullanıcının Kiralık Konut eklemesi (Başarısız)">
+      <created>1588790700220</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1588790700220</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Header Logo değişti" />
     <MESSAGE value="CKEditör Eklendi" />
     <MESSAGE value="Hakkımızda,Konum,İletişim Sayfaları eklendi" />
@@ -290,7 +308,8 @@
     <MESSAGE value="User Ek bilgiler ve resim yapıldı (Video 25)" />
     <MESSAGE value="User Paneli ve Profil Bilgileri yapıldı (Video 26)" />
     <MESSAGE value="Menü içerik ilişkisi (Video 27)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menü içerik ilişkisi (Video 27)" />
+    <MESSAGE value="Kullanıcının Kiralık Konut eklemesi (Başarısız)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcının Kiralık Konut eklemesi (Başarısız)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Notifications" timestamp="1587597951656">
