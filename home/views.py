@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from home.forms import SearchForm, SignUpForm
-from home.models import Setting, ContactFormMessage, ContactFormu
+from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile
 from product.models import Product, Category, Images, Comment
 
 
@@ -168,5 +168,14 @@ def signup_view(request):
                }
     return render(request, 'signup.html', context)
 
+#def property(request):
+    #category = Category.objects.all()
+    #current_user = request.user
+    #profile = UserProfile.objects.get(user_id=current_user.id)
+    #context = {
+        #'category': category,
+        #'profile': profile,
+    #}
+    #return render(request, 'user_property.html', context)
 
 

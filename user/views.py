@@ -15,3 +15,4 @@ def index(request):
         'profile' : profile,
     }
     return render(request,'user_profile.html',context)
+

@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
-from product.models import CommentForm, Comment
+from product.models import CommentForm, Comment #PropertyForm, Product
 
 
 def index(request):
@@ -29,3 +29,23 @@ def addcomment(request,id):
             url =request.META.get('HTTP_REFERER')
             return HttpResponseRedirect(url)
     return HttpResponse("Comment Failed")
+
+
+#def addproperty(request,id):
+
+    #if request.method == 'POST':
+        #form = PropertyForm(request.POST)
+        #if form.is_valid():
+            #data = Product()
+            #data.description = id
+            #data.category = form.cleaned_data['category']
+            #data.title = form.cleaned_data['title']
+            #data.keywords = form.cleaned_data['keywords']
+            #data.image = form.cleaned_data['image']
+            #data.price = form.cleaned_data['price']
+            #data.amount = form.cleaned_data['amount']
+            #data.detail = form.cleaned_data['detail']
+            #data.save()
+            #messages.success(request, "Konut Eklendi!")
+            #return HttpResponseRedirect('/user')
+    #return HttpResponse("Addproperty Failed")

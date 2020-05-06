@@ -98,6 +98,12 @@ class CommentForm(ModelForm):
         fields = ['subject', 'comment', 'rate']
 
 
+#class PropertyForm(ModelForm):
+    #class Meta:
+        #model = Product
+        #fields = ['category', 'title','keywords', 'image', 'price', 'amount', 'detail']
+
+
 
 
 
