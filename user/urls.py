@@ -9,6 +9,8 @@ urlpatterns = [
     path('password/', views.change_password, name="change_password"),
     path('properties/', views.properties, name="properties"),
     path('propertydetail/<int:id>', views.propertydetail, name="propertydetail"),
+    path('comments/', views.comments, name="comments"),
+    path('deletecomment/<int:id>', views.deletecomment, name="deletecomment"),
 
     # ex: /home/5/
     #path('<int:question_id>/', views.detail, name='detail'),

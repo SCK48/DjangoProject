@@ -1,0 +1,82 @@
+{% extends "homebase.html" %}
+{% load static %}
+{% block title %} {{ user.username }} | Comments List {% endblock %}
+{% block keywords %} {{ setting.keywords }}  {% endblock %}
+{% block description %} {{ setting.description }}  {% endblock %}
+
+{% block head %} <link rel="shortcut icon" href="{{ setting.icon.url }}"/> {% endblock %}
+
+{% block content %}
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(../../static/images/hero_bg_2.jpg);height:150px;" data-aos="fade" data-stellar-background-ratio="0.7">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-10">
+            <h1 class="mb-2">Your Comments</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"  data-aos="fade-up" data-aos-delay="200">
+            {% include "user_menu.html" %}
+          </div>
+          <div class="col-md-9" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section-title">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-success" role="alert">
+                            {{ message|safe }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+              <h2>Your Comments</h2>
+            </div>
+              <table class="table">
+                  <tr>
+                      <th class="text-left">ID</th>
+                      <th class="text-left">Product</th>
+                      <th class="text-left">Subject</th>
+                      <th class="text-left">Rate</th>
+                      <th class="text-left">Comment</th>
+                      <th class="text-left">Date</th>
+                      <th class="text-left">Status</th>
+                      <th class="text-left">Detail</th>
+                  </tr>
+                  {% for rs in comments %}
+                    <tr>
+                      <td class="text-left">{{ rs.id }}</td>
+                      <td class="text-left">
+                          <a href="/product/{{ rs.product_id }}/{{ rs.product.slug }}">
+                          <strong>{{ rs.product.title }}</strong>
+                          </a>
+                      </td>
+                      <td class="text-left">{{ rs.subject }}</td>
+                      <td class="text-left">{{ rs.rate }}</td>
+                      <td class="text-left">{{ rs.comment }}</td>
+                      <td class="text-left">{{ rs.create_at }}</td>
+                      <td class="text-left">{{ rs.status }}</td>
+                      <td class="text-left"><a href="/user/deletecomment/{{ rs.id }}" class="btn btn-outline-danger rounded-0" onclick="return confirm('This Comment will be deleted')"> Delete</a></td>
+                  </tr>
+                  {% endfor %}
+                 </table>
+          </div>
+            <!-- <div class="col-md-3"  data-aos="fade-up" data-aos-delay="200">
+            <div class="site-section-title">
+              <h2>İşlemler</h2>
+              <hr>
+            </div>
+              <ul class="dropdown">
+                  <li><a href="/user" class="text-black">User Profile</a></li>
+                  <li><a href="" class="text-black">Update Profile</a></li>
+                  <li><a href="" class="text-black">Change Password</a></li>
+                  <li><a href="" class="text-black">My Property</a></li>
+                  <li><a href="" class="text-black">My Comments</a></li>
+                  <li><a href="/logout" class="text-black">Logout</a></li>
+              </ul>
+          </div> -->
+        </div>
+      </div>
+    </div>
+{% endblock %}

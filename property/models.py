@@ -13,8 +13,8 @@ from product.models import Category
 class Properties(models.Model):
     STATUS = (
         ('New', 'New'),
-        ('Confirmed', 'Confirmed'),
-        ('Declined', 'Declined'),
+        ('True', 'Confirmed'),
+        ('False', 'Declined'),
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
@@ -29,7 +29,7 @@ class Properties(models.Model):
     sqm = models.IntegerField(blank=True,)
     detail = RichTextUploadingField()
     slug = models.SlugField(null=True, unique=True)
-    status = models.CharField(max_length=10, choices=STATUS)
+    status = models.CharField(max_length=10, choices=STATUS,default='New')
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 

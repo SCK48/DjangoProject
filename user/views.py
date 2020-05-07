@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from home.models import UserProfile
-from product.models import Category
+from product.models import Category, Comment
 from property.models import Properties
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
@@ -63,7 +63,7 @@ def change_password(request):
     else:
         category = Category.objects.all()
         form=PasswordChangeForm(request.user)
-        return render(request, 'change_password.html',{
+        return render(request, 'change_password.html', {
             'form': form,
             'category': category,
             'profile': profile,
@@ -96,3 +96,23 @@ def propertydetail(request,id):
         'propertyitem': propertyitem,
     }
     return render(request, 'user_property_detail.html', context)
+
+@login_required(login_url='/login')
+def comments(request):
+    category = Category.objects.all()
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    comments = Comment.objects.filter(user_id=current_user.id)
+    context = {
+        'category': category,
+        'profile': profile,
+        'comments': comments,
+    }
+    return render(request, 'user_comments.html', context)
+
+@login_required(login_url='/login')
+def deletecomment(request,id):
+    current_user = request.user
+    Comment.objects.filter(id=id, user_id=current_user.id).delete()
+    messages.success(request, 'Your Comment has been deleted')
+    return HttpResponseRedirect('/user/comments')
