@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
@@ -7,6 +8,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from home.models import UserProfile
 from product.models import Category
+from property.models import Properties
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -20,7 +22,7 @@ def index(request):
     }
     return render(request,'user_profile.html',context)
 
-
+@login_required(login_url='/login')
 def user_update(request):
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
@@ -44,6 +46,7 @@ def user_update(request):
         }
         return render(request, 'user_update.html', context)
 
+@login_required(login_url='/login')
 def change_password(request):
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
@@ -66,3 +69,30 @@ def change_password(request):
             'profile': profile,
         })
 
+@login_required(login_url='/login')
+def properties(request):
+    category = Category.objects.all()
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    properties = Properties.objects.filter(user_id=current_user.id)
+    context = {
+        'category': category,
+        'profile': profile,
+        'properties': properties,
+    }
+    return render(request, 'user_properties.html', context)
+
+@login_required(login_url='/login')
+def propertydetail(request,id):
+    category = Category.objects.all()
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    properties = Properties.objects.get(user_id=current_user.id, id=id)
+    propertyitem = Properties.objects.filter(id=id)
+    context = {
+        'category': category,
+        'profile': profile,
+        'properties': properties,
+        'propertyitem': propertyitem,
+    }
+    return render(request, 'user_property_detail.html', context)

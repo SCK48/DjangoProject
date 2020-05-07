@@ -1,6 +1,6 @@
 {% extends "homebase.html" %}
 {% load static %}
-{% block title %} {{ profile.company }} {% endblock %}
+{% block title %} Profile | {{ user.username }} {% endblock %}
 {% block keywords %} {{ setting.keywords }}  {% endblock %}
 {% block description %} {{ setting.description }}  {% endblock %}
 
@@ -29,7 +29,8 @@
                   <li><a href="/user/update/" class="text-black">Update Profile</a></li>
                   <li><a href="/user/password/" class="text-black">Change Password</a></li>
                   <li><a href="" class="text-black">Add Property</a></li>
-                  <li><a href="" class="text-black">My Properties</a></li>
+                  <li><a href=/user/properties/"" class="text-black">My Properties</a></li>
+                  <li><a href="/user/comments/" class="text-black">My Comments</a></li>
                   <li><a href="/logout" class="text-black">Logout</a></li>
               </ul>
           </div>

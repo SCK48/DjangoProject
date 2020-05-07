@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
@@ -18,6 +19,7 @@ def index(request):
      }
     return render(request, 'user_property.html', context)
 
+@login_required(login_url='/login')
 def addproperty(request):
 
     if request.method == 'POST':

@@ -20,6 +20,8 @@ CITY = [
     ('Istanbul', 'Istanbul'),
     ('Ankara', 'Ankara'),
     ('Izmir', 'Izmir'),
+    ('Mugla', 'Mugla'),
+    ('Aydin', 'Aydin'),
 ]
 
 class ProfileUpdateForm(forms.ModelForm):

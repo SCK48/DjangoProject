@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="Kullanıcının Kiralık Konut eklemesi Yapıldı (Video 28-29)">
-      <change afterPath="$PROJECT_DIR$/uploads/images/users/IMG_2121.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/villa3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+    <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/user/templates/user_properties.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_property_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_property.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_property.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
@@ -131,7 +133,7 @@
       <workItem from="1588162843652" duration="11212000" />
       <workItem from="1588700279887" duration="3954000" />
       <workItem from="1588781671950" duration="16895000" />
-      <workItem from="1588858693575" duration="4129000" />
+      <workItem from="1588858693575" duration="9428000" />
     </task>
     <task id="LOCAL-00001" summary="Header Logo değişti">
       <created>1585674644488</created>
@@ -280,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588800267990</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Kullanıcı üye bilgileri ve Şifre Güncelleme Yapıldı (Video 31)">
+      <created>1588862894679</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1588862894680</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +318,8 @@
     <MESSAGE value="Menü içerik ilişkisi (Video 27)" />
     <MESSAGE value="Kullanıcının Kiralık Konut eklemesi (Başarısız)" />
     <MESSAGE value="Kullanıcının Kiralık Konut eklemesi Yapıldı (Video 28-29)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcının Kiralık Konut eklemesi Yapıldı (Video 28-29)" />
+    <MESSAGE value="Kullanıcı üye bilgileri ve Şifre Güncelleme Yapıldı (Video 31)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcı üye bilgileri ve Şifre Güncelleme Yapıldı (Video 31)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Notifications" timestamp="1587597951656">
@@ -320,10 +330,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587578799677" />
-    <state x="306" y="0" width="817" height="728" key="CommitChangelistDialog2" timestamp="1588861780461">
+    <state x="306" y="0" width="817" height="728" key="CommitChangelistDialog2" timestamp="1588862891862">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="306" y="0" width="817" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588861780461" />
+    <state x="306" y="0" width="817" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588862891862" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587578785507">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
