@@ -1,6 +1,6 @@
 {% extends "homebase.html" %}
 {% load static %}
-{% block title %} {{ profile.company }} {% endblock %}
+{% block title %} {{ user.username }} {% endblock %}
 {% block keywords %} {{ setting.keywords }}  {% endblock %}
 {% block description %} {{ setting.description }}  {% endblock %}
 
@@ -19,19 +19,21 @@
     <div class="site-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-3"  data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-4"  data-aos="fade-up" data-aos-delay="200">
             <div class="site-section-title">
               <h2>Menu</h2>
               <hr>
             </div>
               <ul class="dropdown">
                   <li><a href="/user" class="text-black">User Profile</a></li>
+                  <li><a href="/user/update/" class="text-black">Update Profile</a></li>
+                  <li><a href="/user/password/" class="text-black">Change Password</a></li>
                   <li><a href="/property" class="text-black">Add Property</a></li>
                   <li><a href="" class="text-black">My Properties</a></li>
                   <li><a href="/logout" class="text-black">Logout</a></li>
               </ul>
           </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="100">
             <div class="site-section-title">
               <h2>Information</h2>
             </div>
@@ -61,20 +63,22 @@
                       <td class="text-left">{{ profile.city }}</td>
                   </tr>
               </table>
-            <p><a href="#" class="btn btn-outline-primary rounded-0 py-2 px-5">Read More</a></p>
+            <!-- <p><a href="#" class="btn btn-outline-primary rounded-0 py-2 px-5">Read More</a></p> -->
           </div>
-            <div class="col-md-3"  data-aos="fade-up" data-aos-delay="200">
+            <!-- <div class="col-md-3"  data-aos="fade-up" data-aos-delay="200">
             <div class="site-section-title">
               <h2>İşlemler</h2>
               <hr>
             </div>
               <ul class="dropdown">
                   <li><a href="/user" class="text-black">User Profile</a></li>
+                  <li><a href="" class="text-black">Update Profile</a></li>
+                  <li><a href="" class="text-black">Change Password</a></li>
                   <li><a href="" class="text-black">My Property</a></li>
                   <li><a href="" class="text-black">My Comments</a></li>
                   <li><a href="/logout" class="text-black">Logout</a></li>
               </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
