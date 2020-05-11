@@ -1,0 +1,205 @@
+{% extends "homebase.html" %}
+{% load static %}
+{% block title %}  {{ property.title }} {% endblock %}
+{% block keywords %} {{ property.keywords }}  {% endblock %}
+{% block description %} {{ property.description }}  {% endblock %}
+
+{% block head %} <link rel="shortcut icon" href="{{ setting.icon.url }}"/> {% endblock %}
+
+
+
+{% block content %}
+<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url({{ property.image.url }});" data-aos="fade" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center">
+      <div class="col-md-10">
+        <span class="d-inline-block text-white px-3 mb-3 property-offer-type rounded">Property Details of</span>
+        <h1 class="mb-2">{{ property.title }}</h1>
+        <p class="mb-5"><strong class="h2 text-success font-weight-bold">${{ property.price }}</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="site-section site-section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div>
+        <h2>{{ property.description }}</h2>
+        <hr>
+          <div class="slide-one-item home-slider owl-carousel">
+            <div><img src="{{ property.image.url }}" alt="Image" class="img-fluid"></div>
+              {% for rs in images %}
+            <div><img src="{{ rs.image.url }}" alt="Image" class="img-fluid"></div>
+              {% endfor %}
+          </div>
+        </div>
+        <div class="bg-white property-body border-bottom border-left border-right">
+          <div class="row mb-5">
+            <div class="col-md-6">
+              <strong class="text-success h1 mb-3">{{ property.price }}TL</strong>
+            </div>
+            <div class="col-md-6">
+              <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
+              <li>
+                <span class="property-specs">Oda Sayısı</span>
+                <span class="property-specs-number">{{ property.room}} + 1</span>
+              </li>
+              <!-- <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+              </li> -->
+              <li>
+                <span class="property-specs">Metrekare</span>
+                <span class="property-specs-number">{{property.sqm}}</span>
+              </li>
+            </ul>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+              <span class="d-inline-block text-black mb-0 caption-text">Home Type</span>
+              <strong class="d-block">{{ property.description}}</strong>
+            </div>
+            <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+              <span class="d-inline-block text-black mb-0 caption-text">Year Built</span>
+              <strong class="d-block">{{ property.year}}</strong>
+            </div>
+            <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+              <span class="d-inline-block text-black mb-0 caption-text">Price/Sqft</span>
+              <strong class="d-block">520</strong>
+            </div>
+          </div>
+          <h2 class="h4 text-black">Konut Detayları</h2>
+          <p>{{ property.detail|safe }}</p>
+          <div class="row no-gutters mt-5">
+            <div class="col-12">
+              <h2 class="h4 text-black mb-3">Gallery</h2>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <a href="{{ property.image.url }}" class="image-popup gal-item"><img src="{{ property.image.url }}" alt="Image" class="img-fluid"></a>
+            </div>
+              {% for rs in images %}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <a href="{{ rs.image.url }}" class="image-popup gal-item"><img src="{{ rs.image.url }}" alt="Image" class="img-fluid"></a>
+            </div>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="bg-white widget border rounded">
+          <h3 class="h4 text-black widget-title mb-3">Kategoriler</h3>
+              {% load mptt_tags %}
+            <ul class="dropdown arrow-top">
+                {% recursetree category %}
+              <li><a href="/category/{{ node.id }}/{{ node.slug }}" class="text-black">{{ node.title }}</a></li>
+                {% if not node.is_leaf_node %}
+                    <ul>
+                        {{ children }}
+                    </ul>
+                {% endif %}
+                {% endrecursetree %}
+            </ul>
+          </li>
+        </div>
+      <div class="bg-white widget border rounded">
+            <h3 class="h4 text-black widget-title mb-3">Comments</h3>
+            {% for rs in comments %}
+            <div class="border-bottom border-top py-3" >
+              <h3 class="h4 text-black widget-title mb-3">{{ rs.user.username}}</h3>
+              <h6>{{ rs.create_at }}</h6>
+              <hr>
+              <p>{{ rs.comment }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="bg-white widget border rounded">
+          <h3 class="h4 text-black widget-title mb-3">Review</h3>
+          {% if messages %}
+              {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}" role="alert">
+                    {{ message }}
+                  </div>
+              {% endfor %}
+          {% endif %}
+          <form action="/product/addcomment/{{ product.id }}" class="form-contact-agent" method="post">
+              {% csrf_token %}
+            <!-- <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control">
+            </div> -->
+            <div class="form-group">
+              <label for="name">Subject</label>
+              <input type="text" name="subject"  class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="comment">Comment</label>
+              <input type="text" name="comment" id="id_comment" class="form-control">
+            </div>
+          <div class="form-group">
+              <label for="name">Rate</label>
+              <div class="icon-star">
+                  <input type="radio" id="star5" name="rate" value="5" /><label for="star5"></label>
+                  <input type="radio" id="star4" name="rate" value="4" /><label for="star4"></label>
+                  <input type="radio" id="star3" name="rate" value="3" /><label for="star3"></label>
+                  <input type="radio" id="star2" name="rate" value="2" /><label for="star2"></label>
+                  <input type="radio" id="star1" name="rate" value="1" /><label for="star1"></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="submit" id="phone" class="btn btn-primary" value="Comment">
+            </div>
+              {% if user.id is not None %}
+              {% else %}
+              {% endif%}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+
+    <div class="row">
+      <div class="col-12">
+        <div class="site-section-title mb-5">
+          <h2>Related Properties</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-5">
+      {% for rs in newproperties %}
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-success">Rent</span>
+            </div>
+            <img src="{{ rs.image.url }}" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <h2 class="property-title"><a href="/product/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> {{ rs.address }}</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">{{ rs.price }} TL</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Oda Sayısı</span>
+                <span class="property-specs-number">{{ rs.room }} + 1</span>
+              </li>
+              <!-- <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+              </li> -->
+              <li>
+                <span class="property-specs">Metrekare</span>
+                <span class="property-specs-number">{{ rs.sqm }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

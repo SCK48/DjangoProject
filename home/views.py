@@ -9,6 +9,7 @@ from django.shortcuts import render
 from home.forms import SearchForm, SignUpForm
 from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile
 from product.models import Product, Category, Images, Comment
+from property.models import Properties
 
 
 def index(request):
@@ -17,12 +18,15 @@ def index(request):
     category = Category.objects.all()
     randomproducts = Product.objects.all().order_by('?')[:6]
     relatedproducts = Product.objects.all().order_by('-id')[:3]
+    newproperties = Properties.objects.filter(status='True').order_by('id')
     context = {'setting': setting,
                'category': category,
                'page': 'home',
                'sliderdata': sliderdata,
                'randomproducts': randomproducts,
-               'relatedproducts': relatedproducts}
+               'relatedproducts': relatedproducts,
+               'newproperties': newproperties
+               }
     return render(request, 'index.html', context)
 
 def hakkimizda(request):
@@ -66,11 +70,14 @@ def category_products(request,id,slug):
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
     products = Product.objects.filter(category_id=id)
+    propertys = Properties.objects.filter(category_id=id, status='True')
     context = {'products': products,
                'category': category,
                'sliderdata': sliderdata,
-               'categorydata': categorydata}
-    return render(request,'products.html',context)
+               'categorydata': categorydata,
+               'propertys':propertys,
+               }
+    return render(request, 'products.html', context)
 
 
 
@@ -179,3 +186,16 @@ def signup_view(request):
     #return render(request, 'user_property.html', context)
 
 
+def property_detail(request,id,slug):
+    category = Category.objects.all()
+    property = Properties.objects.get(pk=id)
+    #images = Images.objects.filter(product_id=id)
+    newproperties = Properties.objects.filter(status='True').order_by('id')
+    #comments = Comment.objects.filter(product_id=id, status='True')
+    context = {'category': category,
+               'property': property,
+               #'images': images,
+               'newproperties': newproperties,
+               #'comments': comments,
+               }
+    return render(request, 'property_detail.html', context)

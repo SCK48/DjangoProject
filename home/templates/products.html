@@ -12,92 +12,118 @@
 {% block content %}
 
     <div class="site-section site-section-sm pb-0">
-      <div class="container">
+    <div class="container">
         <div class="row">
 
-        <div class="row">
-          <div class="col-md-12" >
-            <div class="view-options bg-white py-3 px-3 d-md-flex align-items-center">
-              <div class="ml-auto d-flex align-items-center">
-                    {% load mptt_tags %}
-                    <tr>
-                    {% recursetree category %}
-                  <th><a href="/category/{{ node.id }}/{{ node.slug }}" class="view-list px-3 border-right active">{{ node.title }}</a></th>
-                        {% if not node.is_leaf_node %}
-                            <th class="children"><a href="/category/{{ node.id }}/{{ node.slug }}" class="view-list px-3 border-right active">{{ children }}</a>
-                            </th>
-                        {% endif %}
+            <div class="row">
+                <div class="col-md-12" >
+                    <div class="view-options bg-white py-3 px-3 d-md-flex align-items-center">
+                        <div class="ml-auto d-flex align-items-center">
+                            {% load mptt_tags %}
+                            <tr>
+                                {% recursetree category %}
+                                    <th><a href="/category/{{ node.id }}/{{ node.slug }}" class="view-list px-3 border-right active">{{ node.title }}</a></th>
+                                    {% if not node.is_leaf_node %}
+                                        <th class="children"><a href="/category/{{ node.id }}/{{ node.slug }}" class="view-list px-3 border-right active">{{ children }}</a>
+                                        </th>
+                                    {% endif %}
 
-                        {% endrecursetree %}
-                        </tr>
+                                {% endrecursetree %}
+                            </tr>
+                        </div>
+
+                    </div>
                 </div>
-
-              </div>
             </div>
-          </div>
         </div>
 
-      </div>
+    </div>
 
 
     <div class="site-section site-section-sm bg-light">
-      <div class="container">
-      <h2>{{ categorydata.title }}</h2>
-      <hr>
+        <div class="container">
+            <h2>{{ categorydata.title }}</h2>
+            <hr>
 
-        <div class="row mb-5">
-            {% for rs in products %}
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="property-entry h-100">
-              <a href="/product/{{ rs.id }}/{{ rs.slug }}" class="property-thumbnail">
-                <div class="offer-type-wrap">
-                  <span class="offer-type bg-success">Rent</span>
+            <div class="row mb-5">
+                {% for rs in products %}
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="property-entry h-100">
+                            <a href="/product/{{ rs.id }}/{{ rs.slug }}" class="property-thumbnail">
+                                <div class="offer-type-wrap">
+                                    <span class="offer-type bg-success">Rent</span>
+                                </div>
+                                <img src="{{ rs.image.url }}" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="p-4 property-body">
+                                <h2 class="property-title"><a href="/product/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
+                                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
+                                <strong class="property-price text-primary mb-3 d-block text-success">${{ rs.price }}</strong>
+                                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                                    <li>
+                                        <span class="property-specs">Oda Sayısı</span>
+                                        <span class="property-specs-number">3 + 1</span>
+                                    </li>
+                                    <!-- <li>
+                                      <span class="property-specs">Baths</span>
+                                      <span class="property-specs-number">2</span>
+                                    </li> -->
+                                    <li>
+                                        <span class="property-specs">Metrekare</span>
+                                        <span class="property-specs-number">{{ rs.amount }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% for rs in propertys %}
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="property-entry h-100">
+                            <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="property-thumbnail">
+                                <div class="offer-type-wrap">
+                                    <span class="offer-type bg-success">Rent</span>
+                                </div>
+                                <img src="{{ rs.image.url }}" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="p-4 property-body">
+                                <h2 class="property-title"><a href="/property/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
+                                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>{{ rs.address }}</span>
+                                <strong class="property-price text-primary mb-3 d-block text-success">{{ rs.price }} TL</strong>
+                                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                                    <li>
+                                        <span class="property-specs">Oda Sayısı</span>
+                                        <span class="property-specs-number">{{ rs.room }} + 1</span>
+                                    </li>
+                                    <li>
+                                      <span class="property-specs">Year</span>
+                                      <span class="property-specs-number">{{ rs.year }}</span>
+                                    </li>
+                                    <li>
+                                        <span class="property-specs">Metrekare</span>
+                                        <span class="property-specs-number">{{ rs.sqm }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="site-pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <span>...</span>
+                        <a href="#">10</a>
+                    </div>
                 </div>
-                <img src="{{ rs.image.url }}" alt="Image" class="img-fluid">
-              </a>
-              <div class="p-4 property-body">
-                <h2 class="property-title"><a href="/product/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
-                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
-                <strong class="property-price text-primary mb-3 d-block text-success">${{ rs.price }}</strong>
-                <ul class="property-specs-wrap mb-3 mb-lg-0">
-                  <li>
-                    <span class="property-specs">Oda Sayısı</span>
-                    <span class="property-specs-number">3 + 1</span>
-
-                  </li>
-                  <!-- <li>
-                    <span class="property-specs">Baths</span>
-                    <span class="property-specs-number">2</span>
-
-                  </li> -->
-                  <li>
-                    <span class="property-specs">Metrekare</span>
-                    <span class="property-specs-number">{{ rs.amount }}</span>
-
-                  </li>
-                </ul>
-
-              </div>
             </div>
-          </div>
-            {% endfor %}
 
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="site-pagination">
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <span>...</span>
-              <a href="#">10</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
 
 
