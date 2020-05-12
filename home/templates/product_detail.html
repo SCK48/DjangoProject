@@ -1,5 +1,6 @@
 {% extends "homebase.html" %}
 {% load static %}
+{% load l10n %}
 {% block title %}  {{ product.title }} {% endblock %}
 {% block keywords %} {{ product.keywords }}  {% endblock %}
 {% block description %} {{ product.description }}  {% endblock %}
@@ -37,13 +38,13 @@
         <div class="bg-white property-body border-bottom border-left border-right">
           <div class="row mb-5">
             <div class="col-md-6">
-              <strong class="text-success h1 mb-3">{{ product.price }}TL</strong>
+              <strong class="text-success h1 mb-3">{{ product.price|localize }}TL</strong>
             </div>
             <div class="col-md-6">
               <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
               <li>
                 <span class="property-specs">Oda Sayısı</span>
-                <span class="property-specs-number">3 + 1</span>
+                <span class="property-specs-number">{{ product.room }} + 1</span>
               </li>
               <!-- <li>
                 <span class="property-specs">Baths</span>
@@ -51,7 +52,7 @@
               </li> -->
               <li>
                 <span class="property-specs">Metrekare</span>
-                <span class="property-specs-number">{{product.amount}}</span>
+                <span class="property-specs-number">{{product.sqm}}</span>
               </li>
             </ul>
             </div>
@@ -59,15 +60,15 @@
           <div class="row mb-5">
             <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
               <span class="d-inline-block text-black mb-0 caption-text">Home Type</span>
-              <strong class="d-block">Condo</strong>
+              <strong class="d-block">{{ product.description }}</strong>
             </div>
             <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
               <span class="d-inline-block text-black mb-0 caption-text">Year Built</span>
-              <strong class="d-block">2018</strong>
+              <strong class="d-block">{{ product.year }}</strong>
             </div>
             <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
               <span class="d-inline-block text-black mb-0 caption-text">Price/Sqft</span>
-              <strong class="d-block">520</strong>
+              <strong class="d-block">{{ product.sqm }}</strong>
             </div>
           </div>
           <h2 class="h4 text-black">Konut Detayları</h2>

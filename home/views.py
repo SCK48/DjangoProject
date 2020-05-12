@@ -18,7 +18,7 @@ def index(request):
     category = Category.objects.all()
     randomproducts = Product.objects.all().order_by('?')[:6]
     relatedproducts = Product.objects.all().order_by('-id')[:3]
-    newproperties = Properties.objects.filter(status='True').order_by('id')
+    newproperties = Properties.objects.filter(status='True').order_by('-id')[:3]
     context = {'setting': setting,
                'category': category,
                'page': 'home',

@@ -115,20 +115,20 @@
                         </a>
                         <div class="p-4 property-body">
                             <h2 class="property-title"><a href="/product/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
-                            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
-                            <strong class="property-price text-primary mb-3 d-block text-success">${{ rs.price }}</strong>
+                            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>{{ rs.address }}</span>
+                            <strong class="property-price text-primary mb-3 d-block text-success">{{ rs.price }} TL</strong>
                             <ul class="property-specs-wrap mb-3 mb-lg-0">
                                 <li>
                                     <span class="property-specs">Room</span>
-                                    <span class="property-specs-number">2 <sup>+</sup></span>
+                                    <span class="property-specs-number">{{ rs.room }}+1</span>
                                 </li>
                                 <li>
                                     <span class="property-specs">Year</span>
-                                    <span class="property-specs-number">2</span>
+                                    <span class="property-specs-number">{{ rs.year }}</span>
                                 </li>
                                 <li>
                                     <span class="property-specs">SQM</span>
-                                    <span class="property-specs-number">7,000</span>
+                                    <span class="property-specs-number">{{ rs.sqm }}</span>
                                 </li>
                             </ul>
                         </div>
