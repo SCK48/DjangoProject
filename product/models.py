@@ -41,8 +41,8 @@ class Category(MPTTModel):
 
 class Product(models.Model):
         STATUS = (
-            ('True', 'Evet'),
-            ('False', 'Hayır'),
+            ('True', 'Confirmed'),
+            ('False', 'Declined'),
         )
         category = models.ForeignKey(Category, on_delete=models.CASCADE)
         title = models.CharField(max_length=150)
@@ -81,8 +81,8 @@ class Images(models.Model):
 class Comment(models.Model):
         STATUS = (
             ('New', 'Yeni'),
-            ('True', 'Evet'),
-            ('False', 'Hayır'),
+            ('True', 'Approved'),
+            ('False', 'Declined'),
         )
         product=models.ForeignKey(Product, on_delete=models.CASCADE)
         user=models.ForeignKey(User, on_delete=models.CASCADE)

@@ -42,16 +42,16 @@
                             <div class="col-md-6">
                                 <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
                                     <li>
-                                        <span class="property-specs">Oda Sayısı</span>
-                                        <span class="property-specs-number">{{ property.room}} + 1</span>
+                                        <span class="property-specs">Room</span>
+                                        <span class="property-specs-number">{{ property.room }} + 1</span>
                                     </li>
-                                    <!-- <li>
-                                      <span class="property-specs">Baths</span>
-                                      <span class="property-specs-number">2</span>
-                                    </li> -->
                                     <li>
-                                        <span class="property-specs">Metrekare</span>
-                                        <span class="property-specs-number">{{property.sqm}}</span>
+                                      <span class="property-specs">Year</span>
+                                      <span class="property-specs-number">{{ property.year }}</span>
+                                    </li>
+                                    <li>
+                                        <span class="property-specs">SQM</span>
+                                        <span class="property-specs-number">{{ property.sqm }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -176,7 +176,7 @@
                             <div class="offer-type-wrap">
                                 <span class="offer-type bg-success">Rent</span>
                             </div>
-                            <img src="{{ rs.image.url }}" alt="Image" class="img-fluid">
+                            <img src="{{ rs.image.url }}" alt="Image" class="img-fluid" style="height: 200px" width="350px">
                         </a>
                         <div class="p-4 property-body">
                             <h2 class="property-title"><a href="/product/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
@@ -184,15 +184,15 @@
                             <strong class="property-price text-primary mb-3 d-block text-success">{{ rs.price }} TL</strong>
                             <ul class="property-specs-wrap mb-3 mb-lg-0">
                                 <li>
-                                    <span class="property-specs">Oda Sayısı</span>
+                                    <span class="property-specs">Room</span>
                                     <span class="property-specs-number">{{ rs.room }} + 1</span>
                                 </li>
-                                <!-- <li>
-                                  <span class="property-specs">Baths</span>
-                                  <span class="property-specs-number">2</span>
-                                </li> -->
                                 <li>
-                                    <span class="property-specs">Metrekare</span>
+                                  <span class="property-specs">Year</span>
+                                  <span class="property-specs-number">{{ rs.year }}</span>
+                                </li>
+                                <li>
+                                    <span class="property-specs">SQM</span>
                                     <span class="property-specs-number">{{ rs.sqm }}</span>
                                 </li>
                             </ul>

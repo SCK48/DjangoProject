@@ -69,7 +69,7 @@ def category_products(request,id,slug):
     sliderdata = Product.objects.all()[:4]
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
-    products = Product.objects.filter(category_id=id)
+    products = Product.objects.filter(category_id=id, status='True')
     propertys = Properties.objects.filter(category_id=id, status='True')
     context = {'products': products,
                'category': category,

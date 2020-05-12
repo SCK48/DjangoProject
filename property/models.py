@@ -63,9 +63,9 @@ class PropertyForm(ModelForm):
 
 class PropetyComment(models.Model):
     STATUS = (
-        ('New', 'Yeni'),
-        ('True', 'Evet'),
-        ('False', 'Hayır'),
+        ('New', 'New'),
+        ('True', 'Approved'),
+        ('False', 'Declined'),
     )
     property = models.ForeignKey(Properties, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

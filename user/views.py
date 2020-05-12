@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from home.models import UserProfile
 from product.models import Category, Comment
-from property.models import Properties, Galeri
+from property.models import Properties, Galeri, PropetyComment
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -105,10 +105,12 @@ def comments(request):
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     comments = Comment.objects.filter(user_id=current_user.id)
+    propertycomments = PropetyComment.objects.filter(user_id=current_user.id)
     context = {
         'category': category,
         'profile': profile,
         'comments': comments,
+        'propertycomments': propertycomments,
     }
     return render(request, 'user_comments.html', context)
 
@@ -116,5 +118,6 @@ def comments(request):
 def deletecomment(request,id):
     current_user = request.user
     Comment.objects.filter(id=id, user_id=current_user.id).delete()
+    PropetyComment.objects.filter(id=id, user_id=current_user.id).delete()
     messages.success(request, 'Your Comment has been deleted')
     return HttpResponseRedirect('/user/comments')

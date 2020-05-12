@@ -53,24 +53,24 @@
                                 <div class="offer-type-wrap">
                                     <span class="offer-type bg-success">Rent</span>
                                 </div>
-                                <img src="{{ rs.image.url }}" alt="Image" class="img-fluid">
+                                <img src="{{ rs.image.url }}" alt="Image" class="img-fluid" style="height: 200px" width="350px">
                             </a>
                             <div class="p-4 property-body">
                                 <h2 class="property-title"><a href="/product/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
-                                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
+                                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>{{ rs.address }}</span>
                                 <strong class="property-price text-primary mb-3 d-block text-success">${{ rs.price }}</strong>
                                 <ul class="property-specs-wrap mb-3 mb-lg-0">
                                     <li>
-                                        <span class="property-specs">Oda Sayısı</span>
-                                        <span class="property-specs-number">3 + 1</span>
+                                        <span class="property-specs">Room</span>
+                                        <span class="property-specs-number">{{ rs.room }} + 1</span>
                                     </li>
-                                    <!-- <li>
-                                      <span class="property-specs">Baths</span>
-                                      <span class="property-specs-number">2</span>
-                                    </li> -->
                                     <li>
-                                        <span class="property-specs">Metrekare</span>
-                                        <span class="property-specs-number">{{ rs.amount }}</span>
+                                      <span class="property-specs">Year</span>
+                                      <span class="property-specs-number">{{ rs.year }}</span>
+                                    </li>
+                                    <li>
+                                        <span class="property-specs">SQM</span>
+                                        <span class="property-specs-number">{{ rs.sqm }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -84,7 +84,7 @@
                                 <div class="offer-type-wrap">
                                     <span class="offer-type bg-success">Rent</span>
                                 </div>
-                                <img src="{{ rs.image.url }}" alt="Image" class="img-fluid">
+                                <img src="{{ rs.image.url }}" alt="Image" class="img-fluid" style="height: 200px" width="350px" >
                             </a>
                             <div class="p-4 property-body">
                                 <h2 class="property-title"><a href="/property/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a></h2>
