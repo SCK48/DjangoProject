@@ -11,7 +11,7 @@ def index(request):
     return HttpResponse("Product Page")
 
 @login_required(login_url='/login')
-def addcomment(request,id):
+def addcomment(request, id):
 
     if request.method == 'POST':
         form = CommentForm(request.POST)

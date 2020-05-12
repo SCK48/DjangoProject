@@ -6,6 +6,8 @@ urlpatterns = [
     # ex: /home/
     path('', views.index, name='index'),
     path('addproperty/',views.addproperty, name='addproperty'),
+    path('addcomment/<int:id>',views.propertycomment, name='propertycomment'),
+    path('addgaleri/<int:id>',views.addgaleri, name='addgaleri'),
     # ex: /home/5/
     #path('<int:question_id>/', views.detail, name='detail'),
     # ex: /home/5/results/

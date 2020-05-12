@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from home.models import UserProfile
 from product.models import Category, Comment
-from property.models import Properties
+from property.models import Properties, Galeri
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -89,11 +89,13 @@ def propertydetail(request,id):
     profile = UserProfile.objects.get(user_id=current_user.id)
     properties = Properties.objects.get(user_id=current_user.id, id=id)
     propertyitem = Properties.objects.filter(id=id)
+    images = Galeri.objects.filter(property_id=id)
     context = {
         'category': category,
         'profile': profile,
         'properties': properties,
         'propertyitem': propertyitem,
+        'images': images,
     }
     return render(request, 'user_property_detail.html', context)
 

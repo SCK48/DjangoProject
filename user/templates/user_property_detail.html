@@ -26,8 +26,8 @@
                     <div class="site-section-title">
                         {% if messages %}
                             {% for message in messages %}
-                                <div style="color: #d43f3a; font-size: medium" >
-                                    {{ message|safe }}
+                                <div class="alert alert-{{ message.tags }}" role="alert">
+                                    {{ message }}
                                 </div>
                             {% endfor %}
                         {% endif %}
@@ -79,7 +79,47 @@
                             <td class="text-left"><a href="" class="btn btn-outline-primary rounded-0 py-2 px-5">Update</a></td>
                         </tr>
                     </table>
-                    <p><a href="property/" class="btn btn-outline-success rounded-0 py-2 px-5">Add Property</a></p>
+                    <br>
+                    <hr>
+                    <div class="row no-gutters mt-5">
+                        <div class="col-12">
+                            <h2 class="h4 text-black mb-3">Gallery</h2>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <a href="{{ properties.image.url }}" class="image-popup gal-item"><img src="{{ properties.image.url }}" alt="Image" class="img-fluid"></a>
+                        </div>
+                        {% for rs in images %}
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <a href="{{ rs.image.url }}" class="image-popup gal-item"><img src="{{ rs.image.url }}" alt="Image" class="img-fluid"></a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="site-section-title">
+                        <br>
+                        <hr>
+                        <h2>Add More Images</h2>
+                    </div>
+                    <form action="/property/addgaleri/{{ properties.id }}" class="form-contact-agent" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <!-- <div class="form-group">
+                          <label for="name">Name</label>
+                          <input type="text" id="name" class="form-control">
+                        </div> -->
+                        <div class="form-group">
+                            <label for="name">Title</label>
+                            <input type="text" name="title"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <input type="file" name="image" id="id_image" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" id="phone" class="btn btn-primary" value="Upload">
+                        </div>
+                        {% if user.id is not None %}
+                        {% else %}
+                        {% endif%}
+                    </form>
                 </div>
                 <!-- <div class="col-md-3"  data-aos="fade-up" data-aos-delay="200">
                 <div class="site-section-title">

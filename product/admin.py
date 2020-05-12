@@ -65,7 +65,7 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ['subject', 'comment', 'product', 'user', 'status']
     list_filter = ['status']
 
-admin.site.register(Category,CategoryAdmin2)
-admin.site.register(Product,ProductAdmin)
-admin.site.register(Images,ImagesAdmin)
-admin.site.register(Comment,CommentAdmin)
+admin.site.register(Category, CategoryAdmin2)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Images, ImagesAdmin)
+admin.site.register(Comment, CommentAdmin)

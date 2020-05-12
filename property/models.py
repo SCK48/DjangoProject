@@ -37,7 +37,7 @@ class Properties(models.Model):
         return self.title
 
     #def image_tag(self):
-        #return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
+    #return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
 
     #image_tag.short_description = 'Image'
 
@@ -45,8 +45,43 @@ class Properties(models.Model):
         return reverse('product_detail', kwargs={'slug': self.slug})
 
 
+class Galeri(models.Model):
+    property = models.ForeignKey(Properties, on_delete=models.CASCADE)
+    title = models.CharField(max_length=50, blank=True)
+    image = models.ImageField(blank=True, upload_to='images/')
+
+    def __str__(self):
+        return self.title
+
+
+
 class PropertyForm(ModelForm):
     class Meta:
         model = Properties
         fields = [#'category',
-                  'title', 'keywords', 'description', 'image', 'price', 'address', 'room', 'year', 'sqm', 'detail']
+            'title', 'keywords', 'description', 'image', 'price', 'address', 'room', 'year', 'sqm', 'detail']
+
+class PropetyComment(models.Model):
+    STATUS = (
+        ('New', 'Yeni'),
+        ('True', 'Evet'),
+        ('False', 'Hayır'),
+    )
+    property = models.ForeignKey(Properties, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    subject = models.CharField(max_length=50, blank=True)
+    comment = models.TextField(max_length=500, blank=True)
+    rate = models.IntegerField(blank=True)
+    status = models.CharField(max_length=10, choices=STATUS, default='New')
+    ip = models.CharField(max_length=20, blank=True)
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.subject
+
+
+class GaleriForm(ModelForm):
+    class Meta:
+        model = Galeri
+        fields = ['title', 'image']

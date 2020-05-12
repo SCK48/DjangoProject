@@ -5,8 +5,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from home.models import UserProfile
-from product.models import Category
-from property.models import Properties, PropertyForm
+from product.models import Category, CommentForm
+from property.models import Properties, PropertyForm, PropetyComment, Galeri, GaleriForm
 
 
 def index(request):
@@ -44,3 +44,37 @@ def addproperty(request):
             url = request.META.get('HTTP_REFERER')
             return HttpResponseRedirect(url)
     return HttpResponse("Addproperty Failed")
+
+@login_required(login_url='/login')
+def propertycomment(request, id):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            current_user = request.user
+            data = PropetyComment()
+            data.user_id = current_user.id
+            data.property_id = id
+            data.subject = form.cleaned_data['subject']
+            data.comment = form.cleaned_data['comment']
+            data.rate = form.cleaned_data['rate']
+            data.ip = request.META.get('REMOTE_ADDR')
+            data.save()
+            messages.success(request, "Thanks for your comment!")
+            url = request.META.get('HTTP_REFERER')
+            return HttpResponseRedirect(url)
+    return HttpResponse("Comment Failed")
+
+@login_required(login_url='/login')
+def addgaleri(request, id):
+    if request.method == 'POST':
+        form = GaleriForm(request.POST, request.FILES)
+        if form.is_valid():
+            data = Galeri()
+            data.property_id = id
+            data.image = form.cleaned_data['image']
+            data.title = form.cleaned_data['title']
+            data.save()
+            messages.success(request, "Picture succesfully uploaded!")
+            url = request.META.get('HTTP_REFERER')
+            return HttpResponseRedirect(url)
+        return HttpResponse("Upload Failed")

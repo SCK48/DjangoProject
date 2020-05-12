@@ -9,7 +9,7 @@ from django.shortcuts import render
 from home.forms import SearchForm, SignUpForm
 from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile
 from product.models import Product, Category, Images, Comment
-from property.models import Properties
+from property.models import Properties, PropetyComment, Galeri
 
 
 def index(request):
@@ -189,13 +189,13 @@ def signup_view(request):
 def property_detail(request,id,slug):
     category = Category.objects.all()
     property = Properties.objects.get(pk=id)
-    #images = Images.objects.filter(product_id=id)
-    newproperties = Properties.objects.filter(status='True').order_by('id')
-    #comments = Comment.objects.filter(product_id=id, status='True')
+    images = Galeri.objects.filter(property_id=id)
+    newproperties = Properties.objects.filter(status='True').order_by('-id')[:3]
+    comments = PropetyComment.objects.filter(property_id=id, status='True')
     context = {'category': category,
                'property': property,
-               #'images': images,
+               'images': images,
                'newproperties': newproperties,
-               #'comments': comments,
+               'comments': comments,
                }
     return render(request, 'property_detail.html', context)
