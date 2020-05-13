@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from home.forms import SearchForm, SignUpForm
-from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile
+from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile, FAQ
 from product.models import Product, Category, Images, Comment
 from property.models import Properties, PropetyComment, Galeri
 
@@ -199,3 +199,14 @@ def property_detail(request,id,slug):
                'comments': comments,
                }
     return render(request, 'property_detail.html', context)
+
+
+def faq(request):
+    category = Category.objects.all()
+    newproperties = Properties.objects.filter(status='True').order_by('-id')[:3]
+    faq = FAQ.objects.all().order_by('ordernumber')
+    context = {'category': category,
+               'newproperties': newproperties,
+               'faq': faq,
+               }
+    return render(request, 'faq.html', context)

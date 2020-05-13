@@ -2,206 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4aee5cf-484d-49bf-b095-13ac1ab3167b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/product/migrations/0015_auto_20200512_1831.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/0009_auto_20200512_1851.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/resortakbuk1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/resortakbuk2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/resortakbuk2_g84fLmY.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/resortakbuk3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/resortakbuk4.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/yoncaresort1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/yoncaresort2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/yoncaresort3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/yoncaresort4.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/0006_faq.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/executive-03_JIR3Ff3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._buy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._properties.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._property-details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._rent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/._view-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/css/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/css/._bootstrap-datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/css/._bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/css/._fl-bigmug-line.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/css/._mediaelementplayer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/css/._progress-bar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/._flaticon-2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/._icomoon" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/bigmug-line/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/bigmug-line/._fl-bigmug-line.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/bigmug-line/._fl-bigmug-line.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/bigmug-line/._fl-bigmug-line.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/bigmug-line/._fl-bigmug-line.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/._backup.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/._font" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/._license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/font/._Flaticon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/font/._Flaticon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/font/._Flaticon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/font/._Flaticon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/font/.__flaticon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/font/._flaticon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/font/._flaticon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon-2/license/._license.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/._backup.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/._font" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/._license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/font/._Flaticon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/font/._Flaticon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/font/._Flaticon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/font/._Flaticon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/font/.__flaticon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/font/._flaticon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/font/._flaticon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/flaticon/license/._license.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/._Read Me.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/._demo-files" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/._demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/._fonts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/._selection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/._style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/demo-files/._demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/demo-files/._demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/fonts/._icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/fonts/._icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/fonts/._icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/fonts/icomoon/fonts/._icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._hero_bg_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._hero_bg_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._hero_bg_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._hero_bg_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._img_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._img_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._img_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._img_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._img_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._img_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._img_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._img_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._person_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._person_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._person_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._person_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/images/._person_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/js/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/js/._bootstrap-datepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/js/._mediaelement-and-player.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/js/._player.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/js/._slick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__breadcrumb.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__button-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__carousel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__code.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__custom-forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__images.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__jumbotron.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__media.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__print.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__root.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__tooltip.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__transitions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/.__variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/._bootstrap-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/._bootstrap-reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/._bootstrap.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/._mixins" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/._utilities" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__background-variant.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__border-radius.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__box-shadow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__caret.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__gradients.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__grid-framework.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__hover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__lists.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__nav-divider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__reset-text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__resize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__size.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__table-row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__text-emphasis.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__text-hide.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__text-truncate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__transition.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/mixins/.__visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__align.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__background.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__borders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__embed.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__flex.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__position.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__screenreaders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__shadows.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__sizing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/homeland/__MACOSX/homeland/scss/bootstrap/utilities/.__visibility.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/hakkimizda.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/hakkimizda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/products_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/products_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/property_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/property_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/referanslar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/referanslar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_properties.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,7 +134,8 @@
       <workItem from="1588858693575" duration="16205000" />
       <workItem from="1589209262934" duration="9209000" />
       <workItem from="1589240717214" duration="8169000" />
-      <workItem from="1589295511879" duration="5833000" />
+      <workItem from="1589295511879" duration="6112000" />
+      <workItem from="1589377844390" duration="8123000" />
     </task>
     <task id="LOCAL-00001" summary="Header Logo değişti">
       <created>1585674644488</created>
@@ -515,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589249654825</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Userın eklediği onaylanmış konutlar anasayfaya eklendi.">
+      <created>1589301748490</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1589301748490</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +341,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Hakkımızda,Konum,İletişim Sayfaları eklendi" />
     <MESSAGE value="İletişim formu aktif hale getirildi" />
     <MESSAGE value="Slider dinamik hale getirildi" />
     <MESSAGE value="Kategori alt kategori menu eklendi (Video 15)" />
@@ -548,7 +365,8 @@
     <MESSAGE value="Ana Sayfada düzenlemeler ve yeni eklenen konutları görüntüleme yapıldı" />
     <MESSAGE value="Kullanıcının Konut için Resim Galerisi yüklemesi yapıldı" />
     <MESSAGE value="Ana Sayfa iyileştirmeleri yapıldı" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ana Sayfa iyileştirmeleri yapıldı" />
+    <MESSAGE value="Userın eklediği onaylanmış konutlar anasayfaya eklendi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Userın eklediği onaylanmış konutlar anasayfaya eklendi." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Notifications" timestamp="1587597951656">
@@ -559,10 +377,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587578799677" />
-    <state x="306" y="0" width="817" height="728" key="CommitChangelistDialog2" timestamp="1589249651737">
+    <state x="306" y="0" width="817" height="728" key="CommitChangelistDialog2" timestamp="1589301742224">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="306" y="0" width="817" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589249651737" />
+    <state x="306" y="0" width="817" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589301742224" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587578785507">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -587,14 +405,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587578813369" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1589249659129">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1589301755478">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589249659129" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1589295625659">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589301755478" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1589377842333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589295625659" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1589377842333" />
     <state x="1745" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1587665815188" />
     <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585674520442">
       <screen x="0" y="0" width="1366" height="728" />

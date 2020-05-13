@@ -21,23 +21,26 @@ from django.urls import path, include
 from home import views
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('user/', include('user.urls')),
     path('property/', include('property.urls')),
+    path('home/', include('home.urls')),
+    path('product/', include('product.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+
     path('hakkimizda/', views.hakkimizda, name='hakkimizda'),
     path('referanslar/', views.referanslar, name='referanslar'),
     path('iletisim/', views.iletisim, name='iletisim'),
-    path('home/', include('home.urls')),
-    path('product/', include('product.urls')),
-    path('admin/', admin.site.urls),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('category/<int:id>/<slug:slug>/', views.category_products, name='category_products'),
-    path('product/<int:id>/<slug:slug>/', views.product_detail, name='product_detail'),
     path('search/', views.product_search, name='product_search'),
-    path('search_auto/', views.product_search_auto, name='product_search_auto'),
     path('logout/', views.logout_view, name='logout_view'),
     path('login/', views.login_view, name='login_view'),
     path('signup/', views.signup_view, name='signup_view'),
+    path('sss/', views.faq, name='faq'),
+
+    path('category/<int:id>/<slug:slug>/', views.category_products, name='category_products'),
+    path('product/<int:id>/<slug:slug>/', views.product_detail, name='product_detail'),
+    path('search_auto/', views.product_search_auto, name='product_search_auto'),
     path('property/<int:id>/<slug:slug>/', views.property_detail, name='property_detail'),
     #path('property/', views.property, name='property')
 
