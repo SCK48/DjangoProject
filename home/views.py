@@ -14,9 +14,9 @@ from property.models import Properties, PropetyComment, Galeri
 
 def index(request):
     setting = Setting.objects.get(pk=1)
-    sliderdata = Product.objects.all()[:4]
+    sliderdata = Properties.objects.all().order_by('?')[:4]
     category = Category.objects.all()
-    randomproducts = Product.objects.all().order_by('?')[:6]
+    randomproducts = Properties.objects.all().order_by('?')[:6]
     relatedproducts = Product.objects.all().order_by('-id')[:3]
     newproperties = Properties.objects.filter(status='True').order_by('-id')[:3]
     context = {'setting': setting,
@@ -66,7 +66,7 @@ def iletisim(request):
 
 
 def category_products(request,id,slug):
-    sliderdata = Product.objects.all()[:4]
+    sliderdata = Properties.objects.all()[:4]
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
     products = Product.objects.filter(category_id=id, status='True')
@@ -102,14 +102,14 @@ def product_search(request):
     if request.method == 'POST':
         form = SearchForm(request.POST)
         if form.is_valid():
-            sliderdata = Product.objects.all()[:4]
+            sliderdata = Properties.objects.all()[:4]
             category = Category.objects.all()
             query = form.cleaned_data['query']
-            #catid = form.cleaned_data['catid']
-            #if catid == 0:
-            products = Product.objects.filter(title__icontains=query)
-            #else:
-                #products = Product.objects.filter(title__icontains=query, category_id=catid)
+            catid = form.cleaned_data['catid']
+            if catid == 0:
+                products = Properties.objects.filter(title__icontains=query)
+            else:
+                products = Properties.objects.filter(title__icontains=query, category_id=catid)
             #return HttpResponse(products)
             context = { 'products': products,
                         'category': category,
@@ -122,7 +122,7 @@ def product_search(request):
 def product_search_auto(request):
     if request.is_ajax():
         q = request.GET.get('term', '')
-        product = Product.objects.filter(title__icontains=q)
+        product = Properties.objects.filter(title__icontains=q)
         results = []
         for rs in product:
             product_json = {}
@@ -167,6 +167,11 @@ def signup_view(request):
             password = request.POST['password1']
             user = authenticate(request, username=username, password=password)
             login(request, user)
+            current_user = request.user
+            data = UserProfile()
+            data.user_id = current_user.id
+            data.image = "images/users/user.png"
+            data.save()
             return HttpResponseRedirect('/')
     form = SignUpForm()
     category = Category.objects.all()

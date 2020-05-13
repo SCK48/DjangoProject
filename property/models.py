@@ -58,8 +58,9 @@ class Galeri(models.Model):
 class PropertyForm(ModelForm):
     class Meta:
         model = Properties
-        fields = [#'category',
-            'title', 'keywords', 'description', 'image', 'price', 'address', 'room', 'year', 'sqm', 'detail']
+        fields = [
+            'category', 'title', 'keywords', 'description', 'image', 'price', 'address', 'room', 'year', 'sqm', 'detail'
+        ]
 
 class PropetyComment(models.Model):
     STATUS = (

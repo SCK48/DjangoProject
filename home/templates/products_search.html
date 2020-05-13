@@ -38,7 +38,8 @@
                             <div class="select-wrap">
                                 <span class="icon icon-arrow_drop_down"></span>
                                 {% load mptt_tags %}
-                                <select name="catid" class="form-control d-block rounded-0">
+                                <select name="catid"  class="form-control d-block rounded-0">
+                                    <option value="0">Kategoriler</option>
                                     {% recursetree category %}
                                         {% if node.is_leaf_node %}
                                             <option value="{{ node.id }}">{{ node.title }}</option>
@@ -106,7 +107,7 @@
                 <div class="row mb-4">
                     <div class="col-md-12">
                         <div class="property-entry horizontal d-lg-flex">
-                            <a href="/product/{{ rs.id }}/{{ rs.slug }}" class="property-thumbnail h-100">
+                            <a href="/property/{{ rs.id }}/{{ rs.slug }}" class="property-thumbnail h-100">
                                 <div class="offer-type-wrap">
                                     <span class="offer-type bg-success">Rent</span>
                                 </div>

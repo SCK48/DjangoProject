@@ -21,14 +21,13 @@ def index(request):
 
 @login_required(login_url='/login')
 def addproperty(request):
-
     if request.method == 'POST':
         form = PropertyForm(request.POST, request.FILES)
         if form.is_valid():
             current_user = request.user
             data = Properties()
             data.user_id = current_user.id
-            #data.category = form.cleaned_data['category']
+            data.category = form.cleaned_data['category']
             data.title = form.cleaned_data['title']
             data.keywords = form.cleaned_data['keywords']
             data.description = form.cleaned_data['description']
@@ -41,6 +40,10 @@ def addproperty(request):
             data.detail = form.cleaned_data['detail']
             data.save()
             messages.success(request, "Konut Eklendi!")
+            url = request.META.get('HTTP_REFERER')
+            return HttpResponseRedirect(url)
+        else:
+            messages.error(request, 'Please correct the error below.<br>' + str(form.errors))
             url = request.META.get('HTTP_REFERER')
             return HttpResponseRedirect(url)
     return HttpResponse("Addproperty Failed")

@@ -23,7 +23,7 @@
         <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
         <ul class="site-menu js-clone-nav d-none d-lg-block">
           <li class="active">
-            <a href="/">Anasayfa</a>
+            <a href="/">Home</a>
           </li>
           <li class="has-children">
             <a href="#">Properties</a>
@@ -39,9 +39,9 @@
                 {% endrecursetree %}
             </ul>
           </li>
-          <li><a href="/referanslar">Konum</a></li>
-          <li><a href="/hakkimizda">Hakkimizda</a></li>
-          <li><a href="/iletisim">İletişim</a></li>
+          <li><a href="/referanslar">Location</a></li>
+          <li><a href="/hakkimizda">About Us</a></li>
+          <li><a href="/iletisim">Contact</a></li>
           {% if user.id is not None %}
                 <li class="has-children">
                 <a href="/user">{{ user.username }}</a>
