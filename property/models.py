@@ -1,9 +1,10 @@
+from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput, FileInput, Select , EmailInput
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 
@@ -21,7 +22,7 @@ class Properties(models.Model):
     title = models.CharField(max_length=150)
     keywords = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
-    image = models.ImageField(blank=True, upload_to='images/')
+    image = models.ImageField(upload_to='images/')
     price = models.FloatField(blank=True,)
     address = models.CharField(max_length=255)
     room = models.IntegerField(blank=True,)
@@ -61,6 +62,20 @@ class PropertyForm(ModelForm):
         fields = [
             'category', 'title', 'keywords', 'description', 'image', 'price', 'address', 'room', 'year', 'sqm', 'detail'
         ]
+        widgets = {
+            'category': Select(attrs={'class': 'form-control', 'placeholder': 'category'}, ),
+            'title': TextInput(attrs={'class': 'form-control', 'placeholder': 'title'}),
+            'keywords': TextInput(attrs={'class': 'form-control', 'placeholder': 'keywords'}),
+            'description': TextInput(attrs={'class': 'form-control', 'placeholder': 'description'}),
+            'image': FileInput(attrs={'class': 'form-control', 'placeholder': 'image'}),
+            'price': TextInput(attrs={'class': 'form-control', 'placeholder': 'price'}),
+            'address': TextInput(attrs={'class': 'form-control', 'placeholder': 'address'}),
+            'room': TextInput(attrs={'class': 'form-control', 'placeholder': 'room'}),
+            'year': TextInput(attrs={'class': 'form-control', 'placeholder': 'year'}),
+            'sqm': TextInput(attrs={'class': 'form-control', 'placeholder': 'sqm'}),
+            'detail': CKEditorWidget(),
+
+        }
 
 class PropetyComment(models.Model):
     STATUS = (

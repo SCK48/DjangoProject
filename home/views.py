@@ -14,10 +14,10 @@ from property.models import Properties, PropetyComment, Galeri
 
 def index(request):
     setting = Setting.objects.get(pk=1)
-    sliderdata = Properties.objects.all().order_by('?')[:4]
+    sliderdata = Properties.objects.filter(status='True').order_by('?')[:4]
     category = Category.objects.all()
-    randomproducts = Properties.objects.all().order_by('?')[:6]
-    relatedproducts = Product.objects.all().order_by('-id')[:3]
+    randomproducts = Properties.objects.filter(status='True').order_by('?')[:6]
+    relatedproducts = Product.objects.filter(status='True').order_by('-id')[:3]
     newproperties = Properties.objects.filter(status='True').order_by('-id')[:3]
     context = {'setting': setting,
                'category': category,

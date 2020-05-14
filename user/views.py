@@ -8,8 +8,8 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from home.models import UserProfile
 from product.models import Category, Comment
-from property.models import Properties, Galeri, PropetyComment
-from user.forms import UserUpdateForm, ProfileUpdateForm
+from property.models import Properties, Galeri, PropetyComment, PropertyForm
+from user.forms import UserUpdateForm, ProfileUpdateForm, PropertyUpdateForm
 
 
 def index(request):
@@ -121,3 +121,32 @@ def deletecomment(request,id):
     PropetyComment.objects.filter(id=id, user_id=current_user.id).delete()
     messages.success(request, 'Your Comment has been deleted')
     return HttpResponseRedirect('/user/comments')
+
+@login_required(login_url='/login')
+def propertyedit(request,id):
+    properties = Properties.objects.get(id=id)
+    if request.method == 'POST':
+        form = PropertyUpdateForm(request.POST, request.FILES,instance=properties)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your Property successfully Upated')
+            return HttpResponseRedirect('/user/propertydetail/'+str(id))
+        else:
+            messages.error(request, 'Please correct the error below.<br>' + str(form.errors))
+            return HttpResponseRedirect('/user/propertyedit/'+str(id))
+    else:
+        form = PropertyUpdateForm(instance=properties)
+        category = Category.objects.all()
+        context = {
+            'category': category,
+            'form': form,
+            'properties': properties,
+        }
+        return render(request, 'user_propertyedit.html', context)
+
+@login_required(login_url='/login')
+def propertydelete(request, id):
+    current_user = request.user
+    Properties.objects.filter(id=id, user_id=current_user.id).delete()
+    messages.success(request, 'Property Deleted!')
+    return HttpResponseRedirect('/user/properties')

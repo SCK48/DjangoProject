@@ -10,13 +10,15 @@ from property.models import Properties, PropertyForm, PropetyComment, Galeri, Ga
 
 
 def index(request):
+    form = PropertyForm(request.POST, request.FILES)
     category = Category.objects.all()
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     context = {
-     'category': category,
-     'profile': profile,
-     }
+        'category': category,
+        'profile': profile,
+        'form': form,
+    }
     return render(request, 'user_property.html', context)
 
 @login_required(login_url='/login')
