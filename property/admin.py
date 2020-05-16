@@ -7,6 +7,7 @@ from property.models import Properties, Galeri, PropetyComment
 class PropertiesAdmin(admin.ModelAdmin):
     list_display = ['user', 'title', 'price', 'status']
     list_filter = ['user', 'status']
+    prepopulated_fields = {'slug': ('title',)}
 
 class GaleriAdmin(admin.ModelAdmin):
     list_display = ['title', 'property', 'image']

@@ -14,17 +14,15 @@ from property.models import Properties, PropetyComment, Galeri
 
 def index(request):
     setting = Setting.objects.get(pk=1)
-    sliderdata = Properties.objects.filter(status='True').order_by('?')[:4]
+    sliderdata = Properties.objects.filter(status='Confirmed').order_by('?')[:4]
     category = Category.objects.all()
-    randomproducts = Properties.objects.filter(status='True').order_by('?')[:6]
-    relatedproducts = Product.objects.filter(status='True').order_by('-id')[:3]
-    newproperties = Properties.objects.filter(status='True').order_by('-id')[:3]
+    randomproducts = Properties.objects.filter(status='Confirmed').order_by('?')[:6]
+    newproperties = Properties.objects.filter(status='Confirmed').order_by('-id')[:3]
     context = {'setting': setting,
                'category': category,
                'page': 'home',
                'sliderdata': sliderdata,
                'randomproducts': randomproducts,
-               'relatedproducts': relatedproducts,
                'newproperties': newproperties
                }
     return render(request, 'index.html', context)
@@ -70,7 +68,7 @@ def category_products(request,id,slug):
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
     products = Product.objects.filter(category_id=id, status='True')
-    propertys = Properties.objects.filter(category_id=id, status='True')
+    propertys = Properties.objects.filter(category_id=id, status='Confirmed')
     context = {'products': products,
                'category': category,
                'sliderdata': sliderdata,
@@ -83,16 +81,16 @@ def category_products(request,id,slug):
 
 
 def product_detail(request,id,slug):
+    setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
     product = Product.objects.get(pk=id)
     images = Images.objects.filter(product_id=id)
-    relatedproducts = Product.objects.all().order_by('-id')[:3]
     comments = Comment.objects.filter(product_id = id, status ='True')
     context = {'category': category,
                'product': product,
                'images': images,
-               'relatedproducts': relatedproducts,
                'comments': comments,
+               'setting': setting,
                }
     return render(request, 'product_detail.html', context)
 
@@ -152,8 +150,10 @@ def login_view(request):
             return HttpResponseRedirect('/login')
 
     category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
     context = {
-        'category':category,
+        'category': category,
+        'setting': setting,
                 }
     return render(request, 'login.html', context)
 
@@ -175,8 +175,10 @@ def signup_view(request):
             return HttpResponseRedirect('/')
     form = SignUpForm()
     category = Category.objects.all()
-    context = {'category':category,
+    setting = Setting.objects.get(pk=1)
+    context = {'category': category,
                'form': form,
+               'setting': setting,
                }
     return render(request, 'signup.html', context)
 
@@ -192,26 +194,30 @@ def signup_view(request):
 
 
 def property_detail(request,id,slug):
+    setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
     property = Properties.objects.get(pk=id)
     images = Galeri.objects.filter(property_id=id)
-    newproperties = Properties.objects.filter(status='True').order_by('-id')[:3]
-    comments = PropetyComment.objects.filter(property_id=id, status='True')
+    newproperties = Properties.objects.filter(status='Confirmed', category=property.category).order_by('-id')[:3]
+    comments = PropetyComment.objects.filter(property_id=id, status='Approved')
     context = {'category': category,
                'property': property,
                'images': images,
                'newproperties': newproperties,
                'comments': comments,
+               'setting': setting,
                }
     return render(request, 'property_detail.html', context)
 
 
 def faq(request):
+    setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    newproperties = Properties.objects.filter(status='True').order_by('-id')[:3]
+    newproperties = Properties.objects.filter(status='Confirmed').order_by('-id')[:3]
     faq = FAQ.objects.all().order_by('ordernumber')
     context = {'category': category,
                'newproperties': newproperties,
                'faq': faq,
+               'setting': setting,
                }
     return render(request, 'faq.html', context)

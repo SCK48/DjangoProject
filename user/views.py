@@ -6,21 +6,23 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from home.models import UserProfile
+from home.models import UserProfile, Setting
 from product.models import Category, Comment
 from property.models import Properties, Galeri, PropetyComment, PropertyForm
 from user.forms import UserUpdateForm, ProfileUpdateForm, PropertyUpdateForm
 
 
 def index(request):
+    setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     context = {
-        'category' : category,
-        'profile' : profile,
+        'category': category,
+        'profile': profile,
+        'setting': setting,
     }
-    return render(request,'user_profile.html',context)
+    return render(request, 'user_profile.html', context)
 
 @login_required(login_url='/login')
 def user_update(request):
@@ -36,6 +38,7 @@ def user_update(request):
             return redirect('/user')
     else:
         category =Category.objects.all()
+        setting = Setting.objects.get(pk=1)
         user_form = UserUpdateForm(instance=request.user)
         profile_form = ProfileUpdateForm(instance=request.user.userprofile)
         context = {
@@ -43,6 +46,7 @@ def user_update(request):
             'user_form' : user_form,
             'profile_form' : profile_form,
             'profile': profile,
+            'setting': setting,
         }
         return render(request, 'user_update.html', context)
 
@@ -72,6 +76,7 @@ def change_password(request):
 @login_required(login_url='/login')
 def properties(request):
     category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     properties = Properties.objects.filter(user_id=current_user.id)
@@ -79,12 +84,14 @@ def properties(request):
         'category': category,
         'profile': profile,
         'properties': properties,
+        'setting': setting,
     }
     return render(request, 'user_properties.html', context)
 
 @login_required(login_url='/login')
-def propertydetail(request,id):
+def propertydetail(request, id):
     category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     properties = Properties.objects.get(user_id=current_user.id, id=id)
@@ -96,12 +103,14 @@ def propertydetail(request,id):
         'properties': properties,
         'propertyitem': propertyitem,
         'images': images,
+        'setting': setting,
     }
     return render(request, 'user_property_detail.html', context)
 
 @login_required(login_url='/login')
 def comments(request):
     category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     comments = Comment.objects.filter(user_id=current_user.id)
@@ -111,6 +120,7 @@ def comments(request):
         'profile': profile,
         'comments': comments,
         'propertycomments': propertycomments,
+        'setting': setting,
     }
     return render(request, 'user_comments.html', context)
 
@@ -123,7 +133,7 @@ def deletecomment(request,id):
     return HttpResponseRedirect('/user/comments')
 
 @login_required(login_url='/login')
-def propertyedit(request,id):
+def propertyedit(request, id):
     properties = Properties.objects.get(id=id)
     if request.method == 'POST':
         form = PropertyUpdateForm(request.POST, request.FILES,instance=properties)
@@ -137,10 +147,12 @@ def propertyedit(request,id):
     else:
         form = PropertyUpdateForm(instance=properties)
         category = Category.objects.all()
+        setting = Setting.objects.get(pk=1)
         context = {
             'category': category,
             'form': form,
             'properties': properties,
+            'setting': setting,
         }
         return render(request, 'user_propertyedit.html', context)
 

@@ -14,15 +14,15 @@ from product.models import Category
 class Properties(models.Model):
     STATUS = (
         ('New', 'New'),
-        ('True', 'Confirmed'),
-        ('False', 'Declined'),
+        ('Confirmed', 'Confirmed'),
+        ('Declined', 'Declined'),
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=150)
     keywords = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(blank=True, upload_to='images/')
     price = models.FloatField(blank=True,)
     address = models.CharField(max_length=255)
     room = models.IntegerField(blank=True,)
@@ -80,8 +80,8 @@ class PropertyForm(ModelForm):
 class PropetyComment(models.Model):
     STATUS = (
         ('New', 'New'),
-        ('True', 'Approved'),
-        ('False', 'Declined'),
+        ('Approved', 'Approved'),
+        ('Declined', 'Declined'),
     )
     property = models.ForeignKey(Properties, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

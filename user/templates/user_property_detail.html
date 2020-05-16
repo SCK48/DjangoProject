@@ -27,7 +27,7 @@
                         {% if messages %}
                             {% for message in messages %}
                                 <div class="alert alert-{{ message.tags }}" role="alert">
-                                    {{ message }}
+                                    {{ message|safe }}
                                 </div>
                             {% endfor %}
                         {% endif %}
@@ -82,11 +82,11 @@
                             <h2 class="h4 text-black mb-3">Gallery</h2>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-3">
-                            <a href="{{ properties.image.url }}" class="image-popup gal-item"><img src="{{ properties.image.url }}" alt="Image" class="img-fluid"></a>
+                            <a href="{{ properties.image.url }}" class="image-popup gal-item"><img src="{{ properties.image.url }}" alt="Image" class="img-fluid" style="height: 125px"></a>
                         </div>
                         {% for rs in images %}
                             <div class="col-sm-6 col-md-4 col-lg-3">
-                                <a href="{{ rs.image.url }}" class="image-popup gal-item"><img src="{{ rs.image.url }}" alt="Image" class="img-fluid"></a>
+                                <a href="{{ rs.image.url }}" class="image-popup gal-item"><img src="{{ rs.image.url }}" alt="Image" class="img-fluid" style="height: 125px"></a>
                             </div>
                         {% endfor %}
                     </div>

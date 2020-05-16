@@ -4,12 +4,13 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
-from home.models import UserProfile
+from home.models import UserProfile, Setting
 from product.models import Category, CommentForm
 from property.models import Properties, PropertyForm, PropetyComment, Galeri, GaleriForm
 
 
 def index(request):
+    setting = Setting.objects.get(pk=1)
     form = PropertyForm(request.POST, request.FILES)
     category = Category.objects.all()
     current_user = request.user
@@ -18,6 +19,7 @@ def index(request):
         'category': category,
         'profile': profile,
         'form': form,
+        'setting': setting,
     }
     return render(request, 'user_property.html', context)
 

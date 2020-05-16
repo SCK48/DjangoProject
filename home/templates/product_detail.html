@@ -78,11 +78,11 @@
                                 <h2 class="h4 text-black mb-3">Gallery</h2>
                             </div>
                             <div class="col-sm-6 col-md-4 col-lg-3">
-                                <a href="{{ product.image.url }}" class="image-popup gal-item"><img src="{{ product.image.url }}" alt="Image" class="img-fluid"></a>
+                                <a href="{{ product.image.url }}" class="image-popup gal-item"><img src="{{ product.image.url }}" alt="Image" class="img-fluid" style="height: 100px"></a>
                             </div>
                             {% for rs in images %}
                                 <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="{{ rs.image.url }}" class="image-popup gal-item"><img src="{{ rs.image.url }}" alt="Image" class="img-fluid"></a>
+                                    <a href="{{ rs.image.url }}" class="image-popup gal-item"><img src="{{ rs.image.url }}" alt="Image" class="img-fluid" style="height: 100px"></a>
                                 </div>
                             {% endfor %}
                         </div>
